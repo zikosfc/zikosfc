@@ -1,0 +1,258 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    transition: background-color 0.3s;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background: #ff0000; /* Vermelho do Homem-Aranha */
+    color: #ffffff;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+#site-title {
+    margin: 0;
+    font-size: 3em; /* Tamanho do texto */
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra para dar destaque */
+    font-family: 'Bangers', cursive; /* Fonte mais temática */
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+
+#site-title:hover {
+    color: #ffcccc; /* Cor clara quando o título é hover */
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.9); /* Sombra mais forte no hover */
+    transform: scale(1.1);
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcccc;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+/* Seções */
+.section {
+    padding: 4em 0;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.section:nth-of-type(even) {
+    background: #1e1e1e; /* Cor de fundo alternada */
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 0.5em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Bangers', cursive; /* Fonte temática */
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 0.75em 2em;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Cards dos Poderes */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #333;
+    border-radius: 10px;
+    padding: 1em;
+    width: 30%;
+    text-align: center;
+    margin: 1em;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Vilões */
+.villain-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.villain-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.villain-card img {
+    width: 100px;
+    height: 100px;
+}
+
+.villain-card:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+#villain-info {
+    margin-top: 2em;
+    text-align: center;
+}
+
+#villain-info h3 {
+    font-size: 2em;
+    color: #ff0000;
+}
+
+#villain-info p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Galeria */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+    margin: 1em;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Ícones Sociais */
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Oculto */
+.hidden {
+    display: none;
+}
+
+/* Animações ao rolar */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
